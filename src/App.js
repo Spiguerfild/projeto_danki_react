@@ -1,11 +1,12 @@
 
 import './App.css';
+import Header from './Header.js';
 
-function App() {
+
+function App(props) {
   return (
     <div className="App">
-    <h2>Olá Mundo</h2>
-
+ 
     </div>
   );
 }
