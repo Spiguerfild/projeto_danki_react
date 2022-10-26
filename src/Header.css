@@ -1,0 +1,9 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.header_logo{
+    border: 3px solid black;
+    margin: 20px 20px 0px 0px;
+}
