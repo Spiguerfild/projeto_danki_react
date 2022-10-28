@@ -5,11 +5,12 @@
 
 }
 .tempo{
-  display: flex;
-  font-size: 250px;
+ padding-top: 30px;
+  font-size: 20px;
   justify-content: center;
+
 }
-.tempo h2{
+.tempo h2, .tempo h5{
 font-family:  sans-serif;
 color: rgb(255, 255, 255);
 
