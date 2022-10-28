@@ -2,4 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+}
+.tempo{
+  display: flex;
+  font-size: 250px;
+  justify-content: center;
+}
+.tempo h2{
+font-family:  sans-serif;
+color: rgb(255, 255, 255);
+
+}
+body{
+  background: linear-gradient(to right,black,red)
 }

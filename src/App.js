@@ -1,20 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import './App.css'
+export default function App() {
+  const [hora, setHora] = useState(4);
 
- export default function App() {
-  const [count, setCount] = useState(0);
+  const [minuto, setMinuto] = useState(59);
 
-  // Similar ao componentDidMount e componentDidUpdate:
+  const [segundo, setSegundo] = useState(50);
+
   useEffect(() => {
-    // Atualiza o título do documento usando a API do browser
-    document.title = `Você clicou ${count} vezes`;
+    const interval = setInterval(() => {
+      setSegundo(segundo + 1);
+
+    if(segundo == 59){
+      setSegundo(0);
+      setMinuto(minuto+1)
+
+      if(minuto == 59){
+        setMinuto(0)
+        setHora(hora+1)
+      }
+    }
+  
+    }, 1000);
+
+    return () => clearInterval(interval);
   });
 
   return (
-    <div>
-      <p>Você clicou {count} vezes</p>
-      <button onClick={() => setCount(count + 1)}>
-        Clique aqui
-      </button>
+    <div className="tempo">
+      <h2>
+        {hora}:{minuto}:{segundo}
+      </h2>
     </div>
   );
 }
